@@ -1,0 +1,10 @@
+$theme_hue:             187;
+
+$theme_light:           hsl($theme_hue, 51%, 56%);
+$theme_dark:            hsl($theme_hue, 40%, 45%);
+
+$theme_text:            hsl($theme_hue, 0%, 35%);
+
+$theme_text_on_light:   hsl(210, 58%, 55%);
+$theme_black:           hsl($theme_hue, 5%,  10%);
+$theme_white:           hsl($theme_hue, 100%, 100%);

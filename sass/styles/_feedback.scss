@@ -1,0 +1,19 @@
+.FeedbackRoot {
+    .page-header {
+        margin-bottom: 30px;
+        background: url("../assets/feedback.png") no-repeat;
+        background-position: top right;
+        background-size: contain;
+    }
+    .question {
+        margin: 30px 0;
+        &:last-of-type {
+            margin-bottom: 50px;
+        }
+    }
+    .row {
+        &:last-of-type {
+            margin-bottom: 50px;
+        }
+    }
+}

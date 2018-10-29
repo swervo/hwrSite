@@ -1,0 +1,71 @@
+// sizing variables
+$xsPlus: 360px;
+$smPlus: 768px;
+$mdPlus: 992px;
+$lgPlus: 1200px;
+
+@mixin media($size) {
+    @if $size == retina {
+        @media
+            only screen and (min--moz-device-pixel-ratio: 1.5),
+            only screen and (-o-min-device-pixel-ratio: 3/2),
+            only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 1.5dppx),
+            only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (   min--moz-device-pixel-ratio: 2),
+            only screen and (     -o-min-device-pixel-ratio: 2/1),
+            only screen and (        min-device-pixel-ratio: 2),
+            only screen and (                min-resolution: 192dpi),
+            only screen and (                min-resolution: 2dppx) {
+                @content;
+            }
+    }
+    @else if $size == xs {
+        @media only screen and (min-width: $xsPlus) { @content; }
+    }
+    @else if $size == sm {
+        @media only screen and (min-width: $smPlus) { @content; }
+    }
+    @else if $size == md {
+        @media only screen and (min-width: $mdPlus) { @content; }
+    }
+    @else if $size == lg {
+        @media only screen and (min-width: $lgPlus) { @content; }
+    }
+    @else {
+        @media only screen and (min-width: $size) { @content; }
+    }
+}
+
+// mixins for adding retina assets
+$retinaExtension: "@2x";
+@function getRetinaPath($string, $ext) {
+    $stringLength: str-length($string);
+    $stringRoot: str-slice($string, 1, $stringLength - 4);
+    $fileType: str-slice($string, $stringLength - 3, $stringLength);
+    $newString: $stringRoot + $ext + $fileType;
+    @return $newString;
+}
+
+@mixin retinafy($image, $addSize: true) {
+    background-image: url(#{$image});
+    background-repeat: no-repeat;
+    @if $addSize {
+        background-size: 100%;
+    }
+    @include media(retina) {
+        background-image: url(getRetinaPath($image, $retinaExtension));
+    }
+}
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

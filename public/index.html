@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scribble</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Scribble">
+    <meta name="author" content="Nokia">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah&text=Scrible' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="scripts/bundle.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="dropdown pull-right login">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">Log in <span class="caret"></span></button>
+        <ul id="dropdown" class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">Not currently available</a></li>
+        </ul>
+      </div>
+      <a href="/" role="tab" data-target="#home" class="text-primary navbar-brand" style="font-family: 'Gloria Hallelujah', cursive;">Scribble</a>
+
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./customers" role="tab" data-target="#customers">Customers</a></li>
+              <li><a href="./roadmap" role="tab" data-target="#roadmap">Roadmap</a></li>
+              <li><a href="./downloads" role="tab" data-target="#downloads">Downloads</a></li>
+              <li><a href="./blog" role="tab" data-target="#blog">Blog</a></li>
+              <li><a href="./feedback" role="tab" data-target="#feedback">Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <div class="container HomeRoot">
+          <div class="row">
+              <div class="col-md-5 col-md-offset-1 nAlign">
+                <div class="page-header">
+                  <h1>Scribble</h1>
+                </div>
+                <p class="heroCopy">Single character handwriting recognition.</p>
+                <br>
+                <p class="heroCopy">For use in Nokia programs <br> and for external licensing.</p>
+              </div>
+              <div class="col-md-6">
+                <div class="heroIcon"></div>
+              </div>
+          </div>
+        </div>
+        <div class="container HomeRoot--2">
+
+          <div class="row">
+            <div class="page-header">
+              <h1>Products</h1>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/scribbleEngine.png">
+                <div class="caption">
+                  <h2>Scribble engine</h2>
+                  <p>Java engine that recognises strokes on device, integrated with <a href="https://zlauncher.com/">Z Launcher</a> and demonstration Scribble test application.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/scribbleApp.png">
+                <div class="caption">
+                  <h2>Scribble test app</h2>
+                  <p>Scribble engine powered demonstration and character capture application.</p>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/scribbleTools.png">
+                <div class="caption">
+                  <h2>Scribble tools</h2>
+                  <p>Lightweight javascript tools for processing collected user stroke data for refining recognition models and test data sets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="page-header">
+              <h1>How it works</h1>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/writeCharacter.png">
+                <div class="caption">
+                  <h2>1. Write</h2>
+                  <p>Java handwriting recognition engine easily integrated with estate challenged applications.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="Analyze character" src="assets/extractFeatures.png">
+                <div class="caption">
+                  <h2>2. Analyze</h2>
+                  <p>Signature characteristics (eg., loops, cusps, etc) of individual glyphs are determined using feature extraction.</p>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="Compare to model" src="assets/modelData.png">
+                <div class="caption">
+                  <h2>3. Compare</h2>
+                  <p>Characteristics are compared against local collection of known glyphs (the <i>model</i>) for similarities until a match is found.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="Return result" src="assets/scribbleOutput.png">
+                <div class="caption">
+                  <h2>4. Respond</h2>
+                  <p>Result of comparison is returned to the application.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="page-header">
+              <h1>Continuous improvement</h1>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/dataHarvest.png">
+                <div class="caption">
+                  <h2>1. Harvest</h2>
+                  <p>Instrumentation integrated with recognition engine collects and stores examples of user entered characters.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/classify.png">
+                <div class="caption">
+                  <h2>2. Classify</h2>
+                  <p>Collected data is manually rendered and classified using unique web-based tooling designed specifically for purpose.</p>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/testData.png">
+                <div class="caption">
+                  <h2>3. Integrate</h2>
+                  <p>Classified data is merged with existing test data to create progressively more stringent tests for the model.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img alt="100%x200" src="assets/modelData.png">
+                <div class="caption">
+                  <h2>4. Refine</h2>
+                  <p>Model (see 3 above) quality is continuously improved through the inclusion of enriched test data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="customers" class="tab-pane fade">
+        <div class="container CustomersRoot">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1>Featured Customer</h1>
+              </div>
+              <a class="featuredCustomer" href="https://zlauncher.com/"></a>
+              <div class="page-header">
+                <h1>Potential Customer</h1>
+              </div>
+              <a class="featuredCustomer android" href="http://www.engadget.com/2014/10/11/microsoft-android-wear-keyboard/"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="roadmap" class="tab-pane fade">
+        <div class="container RoadmapRoot">
+          <div class="row">
+            <div class="col-md-12 js-roadmapContent">
+              <div class="page-header">
+                <h1>Roadmap</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="downloads" class="tab-pane fade">
+        <div class="container DownloadsRoot">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1>Downloads</h1>
+              </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+              <p>Download the Scribble source code, the stand-alone Scribble application or a pre-built component for integrating in your own project.</p>
+              <p>Current version: <strong>v0.01.32</strong></p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Version</th>
+                    <th>Scribble application</th>
+                    <th>Scribble engine</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>v0.01.32</td>
+                    <td><a href="#">scribble.apk</a></td>
+                    <td><a href="#">scribbleEngine.jar</a></td>
+                  </tr>
+                </tbody>
+            </table>
+            <p>Older versions:</p>
+            <table class="table table-striped tableLast">
+              <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Scribble application</th>
+                  <th>Scribble engine</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>v0.01.30</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.01.24</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.01.09</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.01.07</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.01.04</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.00.98</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.00.92</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.00.89</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+                <tr>
+                  <td>v0.00.01</td>
+                  <td><a href="#">scribble.apk</a></td>
+                  <td><a href="#">scribbleEngine.jar</a></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="blog" class="tab-pane fade">
+        <div class="container BlogRoot">
+          <div class="row">
+            <div class="col-md-12 js-blogContent">
+              <div class="page-header">
+                <h1>Scribble blog</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="feedback" class="tab-pane fade">
+        <div class="container FeedbackRoot">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1>Talk to us</h1>
+              </div>
+              <p class="question">Do you have a feature you'd like to see in Scribble?</p>
+              <p class="question">Or have you found a bug?</p>
+              <p class="question">Let us know below.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <form role="form">
+                <div class="form-group">
+                  <label for="exampleInputFile">Your feature request or problem</label>
+                  <textarea class="form-control" rows="24" placeholder="Enter your text here"></textarea>
+                  <p class="help-block">Thank-you for helping to improve Scribble</p>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Provide your email address so we can get back to you</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a class="text-primary navbar-brand" href="#home" data-toggle="tab" style="font-family: 'Gloria Hallelujah', cursive;">Scribble</a>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color: #F2F5FB;
+    font-size: 16px;
+}
+
+.login {
+    display: none;
+    top: 18px;
+    right: 30px;
+    @include media(sm) {
+        display: block;
+    }
+}
+
+footer {
+    @include gradient-vertical(#2E3137, #3E4148);
+    padding: 50px 0;
+    margin: 50px auto 0;
+    text-align: center;
+    color: #FFF;
+    .navbar-brand {
+        float: none;
+    }
+}
+

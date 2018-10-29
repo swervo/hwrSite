@@ -1,0 +1,29 @@
+.CustomersRoot {
+    padding-bottom: 100px;
+    background: #272727 -webkit-radial-gradient(center top,circle,#595858,#272727 500px) no-repeat;
+    color: $theme_white;
+    text-align: center;
+
+    .featuredCustomer {
+        @include size(auto, 630px);
+        @include center-block();
+        margin-bottom: 50px;
+        border: 2px solid $theme_white;
+        border-radius: 20px;
+        background: black url("../assets/zLauncher.jpg") no-repeat;
+        background-size: cover;
+        background-position: 50%;
+
+        &.android {
+            background-image: url("../assets/androidWear.jpg");
+        }
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.6) 0 0 4px inset, $brand-primary 0 0 15px 0;
+            border-color: $brand-primary;
+        }
+    }
+
+}
+
+

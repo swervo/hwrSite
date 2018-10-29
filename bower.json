@@ -1,0 +1,9 @@
+{
+  "name": "scribbleweb",
+  "version": "0.0.1",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.2"
+  }
+}

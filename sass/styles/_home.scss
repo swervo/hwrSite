@@ -1,0 +1,34 @@
+.HomeRoot {
+    background-color: #272727;
+    background-image: -webkit-radial-gradient(center top, circle, #595858, #272727 500px);
+    background-image: radial-gradient(circle at center top, #595858, #272727 500px);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #FFF;
+
+    .heroCopy {
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 35px;
+        @include font-smoothing();
+    }
+
+    .heroIcon {
+        position: relative;
+        left: 25px;
+        @include size(540px, 680px);
+        background: url("../assets/zLauncherCropFlat.png") no-repeat;
+    }
+
+    .nAlign {
+        margin-top: 100px;
+    }
+}
+
+.HomeRoot--2 {
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 200;
+    }
+}

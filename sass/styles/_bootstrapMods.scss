@@ -1,0 +1,43 @@
+// Selectors in this file are overwriting bootstrap defaults
+// Ultimately these should be used to create a theme
+
+.navbar-inverse {
+    @include gradient-vertical(#2E3137, #3E4148);
+}
+
+
+.navbar-brand {
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    font-size: 40px;
+    line-height: 70px;
+    @include media(sm) {
+        margin-right: 20px;
+    }
+}
+
+.thumbnail {
+    padding: 15px;
+}
+
+.tab-content {
+    margin-top: 70px;
+}
+
+.page-header {
+    margin: 80px 0 40px;
+    border: none;
+    h1 {
+        @extend .text-primary;
+        font-weight: 100;
+        font-size: 64px;
+
+    }
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+
